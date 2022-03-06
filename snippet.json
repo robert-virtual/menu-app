@@ -1,0 +1,26 @@
+{
+  "Crear componente": {
+    "prefix": "fc",
+    "body": [
+      "import { Text,StyleSheet, View } from 'react-native';",
+      "",
+      "export function $TM_FILENAME_BASE() {",
+      "\treturn (",
+      "\t\t<View style={styles.container}>",
+      "\t\t\t<Text>$TM_FILENAME_BASE</Text>",
+      "\t\t</View>",
+      "\t);",
+      "}",
+      "",
+      "const styles = StyleSheet.create({",
+      "\tcontainer: {",
+      "\t\tflex: 1,",
+      "\t\tbackgroundColor: '#fff',",
+      "\t\talignItems: 'center',",
+      "\t\tjustifyContent: 'center',",
+      "\t}",
+      "})"
+    ],
+    "description": "Crear componente"
+  }
+}
