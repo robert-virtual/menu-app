@@ -1,20 +1,25 @@
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
-import { Contacto } from "./pages/Contacto";
-import { Acercade } from "./pages/Acercade";
-import { Inicio } from "./pages/Inicio";
+import { NavigationContainer } from "@react-navigation/native";
 
-const Menu = createDrawerNavigator();
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { MenuComponet } from "./routes/Menu";
+import { Producto } from "./pages/Producto";
+import { Cart } from "./pages/Cart";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Menu.Navigator>
-        <Menu.Screen name="Inicio" component={Inicio} />
-        <Menu.Screen name="Contacto" component={Contacto} />
-        <Menu.Screen name="Acercade" component={Acercade} />
-      </Menu.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Menu"
+          options={{ headerShown: false }}
+          component={MenuComponet}
+        />
+        <Stack.Screen name="Producto" component={Producto} />
+        <Stack.Screen name="Cart" component={Cart} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
