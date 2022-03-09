@@ -11,7 +11,13 @@ export default function App() {
   return (
     <NavigationContainer>
       <Menu.Navigator>
-        <Menu.Screen name="Inicio" component={Inicio} />
+        <Menu.Screen
+          name="Inicio"
+          options={{
+            headerTitle: "Nuevo titulo",
+          }}
+          component={Inicio}
+        />
         <Menu.Screen name="Contacto" component={Contacto} />
         <Menu.Screen name="Acercade" component={Acercade} />
       </Menu.Navigator>
